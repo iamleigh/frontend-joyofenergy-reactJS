@@ -15,7 +15,19 @@ export default defineConfig([
         },
         extends: ["js/recommended"],
         languageOptions: {
+            parserOptions: {
+                ecmaVersion: "latest",
+                sourceType: "module",
+                ecmaFeatures: {
+                    jsx: true,
+                },
+            },
             globals: globals.browser,
+        },
+        settings: {
+            react: {
+                version: "detect",
+            },
         },
         rules: {
             ...pluginReact.configs.flat.recommended.rules,
