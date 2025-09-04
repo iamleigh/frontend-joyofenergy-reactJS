@@ -1,7 +1,11 @@
 /** @type {import('stylelint').Config} */
 export default {
-  extends: ["stylelint-config-standard"],
+  extends: [
+    "stylelint-config-standard",
+    "stylelint-prettier/recommended",
+  ],
+  plugins: ["stylelint-prettier"],
   rules: {
-    // add project rules here
-  }
+    "prettier/prettier": true,
+  },
 };
