@@ -1,1 +1,2 @@
-export * from "./EnergyConsumption";
+import EnergyConsumption from "./EnergyConsumption";
+export { EnergyConsumption };

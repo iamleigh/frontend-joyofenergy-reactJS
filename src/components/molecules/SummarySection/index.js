@@ -1,1 +1,2 @@
-export * from "./SummarySection";
+import SummarySection from "./SummarySection";
+export default SummarySection;

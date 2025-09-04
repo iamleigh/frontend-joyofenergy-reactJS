@@ -1,1 +1,1 @@
-export * from "./DeviceSection";
+export { default } from "./DeviceSection";
