@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import { renderChart } from "../utils/chart.js";
-import { groupByDay, sortByTime } from "../utils/reading";
-import Button from "./atoms/Button";
+import { renderChart } from "../../../utils/chart.js";
+import { groupByDay, sortByTime } from "../../../utils/reading.js";
+import Button from "../../atoms/Button/index.js";
 
 export const EnergyConsumption = ({ readings }) => {
   const containerId = "usageChart";

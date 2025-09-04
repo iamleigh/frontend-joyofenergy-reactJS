@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Sidebar from "./organisms/Sidebar";
-import { EnergyConsumption } from "./EnergyConsumption.jsx";
+import { EnergyConsumption } from "./organisms/EnergyConsumption";
 import { getReadings } from "../utils/reading";
 
 export const App = () => {
