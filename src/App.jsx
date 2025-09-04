@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Sidebar from "./organisms/Sidebar";
-import { EnergyConsumption } from "./organisms/EnergyConsumption";
-import { getReadings } from "../utils/reading";
+import Sidebar from "./components/organisms/Sidebar";
+import { EnergyConsumption } from "./components/organisms/EnergyConsumption";
+import { getReadings } from "./utils/reading";
 
 export const App = () => {
   const [readings, setReadings] = useState();
