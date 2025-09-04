@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
+import PropTypes from "prop-types";
 import { renderChart } from "../../../utils/chart.js";
 import { groupByDay, sortByTime } from "../../../utils/reading.js";
 import Button from "../../atoms/Button/index.js";
 
-export const EnergyConsumption = ({ readings }) => {
+const EnergyConsumption = ({ readings }) => {
     const containerId = "usageChart";
     useEffect(() => {
         renderChart(containerId, sortByTime(groupByDay(readings)).slice(-30));
@@ -23,3 +24,14 @@ export const EnergyConsumption = ({ readings }) => {
         </>
     );
 };
+
+EnergyConsumption.propTypes = {
+    readings: PropTypes.arrayOf(
+        PropTypes.shape({
+            time: PropTypes.string.isRequired,
+            usage: PropTypes.number.isRequired,
+        })
+    ).isRequired,
+};
+
+export default EnergyConsumption;

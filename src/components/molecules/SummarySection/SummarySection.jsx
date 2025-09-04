@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const SummarySection = ({ summary, subtitle }) => (
     <>
@@ -6,5 +7,10 @@ const SummarySection = ({ summary, subtitle }) => (
         <p className="darkgray mb2">{subtitle}</p>
     </>
 );
+
+SummarySection.propTypes = {
+    summary: PropTypes.string.isRequired,
+    subtitle: PropTypes.string.isRequired,
+};
 
 export default SummarySection;

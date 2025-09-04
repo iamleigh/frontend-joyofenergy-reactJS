@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const DeviceSection = ({ title, usage }) => (
     <div className="shadow-2 roundedMore bg-super-light-grey mb1">
@@ -8,5 +9,10 @@ const DeviceSection = ({ title, usage }) => (
         </p>
     </div>
 );
+
+DeviceSection.propTypes = {
+    title: PropTypes.string.isRequired,
+    usage: PropTypes.string.isRequired,
+};
 
 export default DeviceSection;
