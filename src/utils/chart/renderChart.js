@@ -1,4 +1,23 @@
 import { Chart } from "chart.js";
+import {
+    BarController,
+    BarElement,
+    CategoryScale,
+    LinearScale,
+    Tooltip,
+    Legend,
+    Title,
+} from "chart.js";
+
+Chart.register(
+    BarController,
+    BarElement,
+    CategoryScale,
+    LinearScale,
+    Tooltip,
+    Legend,
+    Title
+);
 import { formatDateLabel } from "../date";
 
 /**
@@ -27,6 +46,8 @@ export const renderChart = (containerId, readings, options) => {
             },
         ],
     };
+
+    if (!containerId || !document?.getElementById(containerId)) return;
 
     const chart = new Chart(containerId, {
         type: "bar",
