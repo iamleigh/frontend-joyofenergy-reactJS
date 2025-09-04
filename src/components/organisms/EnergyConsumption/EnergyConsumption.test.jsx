@@ -5,9 +5,9 @@ import EnergyConsumption from "./EnergyConsumption.jsx";
 
 describe("EnergyConsumption", () => {
     const mockReadings = [
-        { time: "2025-09-01T00:00:00Z", reading: 12 },
-        { time: "2025-09-02T00:00:00Z", reading: 15 },
-        { time: "2025-09-03T00:00:00Z", reading: 14 },
+        { time: "2025-09-01T00:00:00Z", usage: 12 },
+        { time: "2025-09-02T00:00:00Z", usage: 15 },
+        { time: "2025-09-03T00:00:00Z", usage: 14 },
     ];
 
     it("renders the heading, button, and canvas", () => {
