@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Sidebar from "./components/organisms/Sidebar";
 import { EnergyConsumption } from "./components/organisms/EnergyConsumption";
 import { getReadings } from "./utils/reading";
+import "basscss/css/basscss.css";
 
 export const App = () => {
     const [readings, setReadings] = useState();
