@@ -1,8 +1,8 @@
 import React from "react";
-import SummarySection from "./molecules/SummarySection";
-import DeviceSection from "./molecules/DeviceSection";
+import SummarySection from "../../molecules/SummarySection";
+import DeviceSection from "../../molecules/DeviceSection";
 
-export const Sidebar = () => (
+const Sidebar = () => (
   <>
     <SummarySection summary="⚡️ 1.4kW" subtitle="Power draw" />
     <SummarySection summary="☀️️ 5.8kW" subtitle="Solar power production" />
@@ -19,3 +19,5 @@ export const Sidebar = () => (
     </section>
   </>
 );
+
+export default Sidebar;
