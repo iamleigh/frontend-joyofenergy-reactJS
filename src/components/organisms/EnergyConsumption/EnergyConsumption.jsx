@@ -28,7 +28,10 @@ const EnergyConsumption = ({ readings }) => {
 EnergyConsumption.propTypes = {
     readings: PropTypes.arrayOf(
         PropTypes.shape({
-            time: PropTypes.string.isRequired,
+            time: PropTypes.oneOfType([
+                PropTypes.string,
+                PropTypes.instanceOf(Date),
+            ]).isRequired,
             usage: PropTypes.number.isRequired,
         })
     ).isRequired,
