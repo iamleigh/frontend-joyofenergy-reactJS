@@ -1,16 +1,14 @@
-import * as chartJs from "chart.js";
+import { Chart } from "chart.js";
 import { formatDateLabel } from "../date";
 
-let chart;
-
-export const renderChart = (containerId, readings) => {
-    chartJs.Chart.defaults.font.size = "10px";
-
-    chartJs.Chart.register.apply(
-        null,
-        Object.values(chartJs).filter(chartClass => chartClass.id)
-    );
-
+/**
+ * Renders a bar chart inside a container using the provided readings.
+ *
+ * @param {string} containerId - DOM ID of the canvas element.
+ * @param {Array<{time: string | number, value: number}>} readings - Data points.
+ * @param {object} [options] - Optional override for default chart config.
+ */
+export const renderChart = (containerId, readings, options) => {
     const labels = readings.map(({ time }) => formatDateLabel(time));
     const values = readings.map(({ value }) => value);
 
@@ -30,11 +28,7 @@ export const renderChart = (containerId, readings) => {
         ],
     };
 
-    if (chart) {
-        chart.destroy();
-    }
-
-    chart = new chartJs.Chart(containerId, {
+    const chart = new Chart(containerId, {
         type: "bar",
         data: data,
         options: {
@@ -55,7 +49,10 @@ export const renderChart = (containerId, readings) => {
                     display: false,
                 },
             },
-            maintainAspectRatio: false,
+            maintainAspectRatio: true,
+            ...options,
         },
     });
+
+    return chart;
 };
