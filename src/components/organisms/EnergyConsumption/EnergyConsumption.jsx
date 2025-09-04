@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
-import { renderChart } from "../../../utils/chart.js";
+import { renderChart } from "../../../utils/chart";
 import { groupByDay, sortByTime } from "../../../utils/reading.js";
 import Button from "../../atoms/Button/index.js";
 

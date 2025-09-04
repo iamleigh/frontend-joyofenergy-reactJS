@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { formatDateLabel } from "./chart";
+import { formatDateLabel } from "../date";
 
 describe("#chart formatDateLabel", () => {
     it("should format date label", () => {

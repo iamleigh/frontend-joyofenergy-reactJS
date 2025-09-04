@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import EnergyConsumption from "./EnergyConsumption.jsx";
 
-vi.mock("../../../utils/chart.js");
+vi.mock("../../../utils/chart/index.js");
 
 describe("EnergyConsumption", () => {
     const mockReadings = [

@@ -1,18 +1,7 @@
 import * as chartJs from "chart.js";
+import { formatDateLabel } from "../date";
 
 let chart;
-
-export const formatDateLabel = timestamp => {
-    const date = new Date(timestamp);
-    const month = date.getMonth();
-    const day = date.getDate();
-
-    const formatPart = value => {
-        return value < 10 ? `0${value}` : `${value}`;
-    };
-
-    return `${formatPart(day)}/${formatPart(month + 1)}`;
-};
 
 export const renderChart = (containerId, readings) => {
     chartJs.Chart.defaults.font.size = "10px";
