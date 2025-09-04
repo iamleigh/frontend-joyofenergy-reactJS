@@ -1,7 +1,7 @@
 const Button = ({ label }) => {
     return (
         <button
-          className="
+            className="
               h5
               inline-block
               shadow-2
@@ -16,7 +16,7 @@ const Button = ({ label }) => {
               bold
             "
         >
-          {label}
+            {label}
         </button>
     );
 };
