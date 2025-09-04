@@ -2,11 +2,12 @@
 export default {
     semi: true,
     singleQuote: false,
-    printWidth: 100,
+    printWidth: 80,
     tabWidth: 4,
     useTabs: false,
     trailingComma: "es5",
     arrowParens: "avoid",
+    proseWrap: "preserve",
     endOfLine: "lf",
     insertFinalNewline: true,
     overrides: [
