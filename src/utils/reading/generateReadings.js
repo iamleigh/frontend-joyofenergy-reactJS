@@ -11,7 +11,7 @@ export const getReadings = async (length = 1200) => {
 
     // Generate an array of readings with timestamps decreasing by one hour
     return [...new Array(length)].map((_, index) => ({
-        time: current - index * hour,
+        time: new Date(current - index * hour).toISOString(),
         value: Math.random() * 0.7 + 0.4,
     }));
 };
