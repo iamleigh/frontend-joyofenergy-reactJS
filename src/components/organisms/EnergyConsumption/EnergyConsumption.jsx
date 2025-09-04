@@ -19,7 +19,7 @@ const EnergyConsumption = ({ readings }) => {
                 <Button label="Last 30 days" />
             </section>
             <section className="chartheight mb3">
-                <canvas id={containerId} />
+                <canvas id={containerId} data-testid="usageChart" />
             </section>
         </>
     );
@@ -28,7 +28,7 @@ const EnergyConsumption = ({ readings }) => {
 EnergyConsumption.propTypes = {
     readings: PropTypes.arrayOf(
         PropTypes.shape({
-            time: PropTypes.number.isRequired,
+            time: PropTypes.string.isRequired,
             usage: PropTypes.number.isRequired,
         })
     ).isRequired,

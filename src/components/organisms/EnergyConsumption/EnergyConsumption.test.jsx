@@ -19,6 +19,6 @@ describe("EnergyConsumption", () => {
         expect(
             screen.getByRole("button", { name: /last 30 days/i })
         ).toBeInTheDocument();
-        expect(screen.getByRole("img", { hidden: true })).toBeInTheDocument(); // canvas fallback
+        expect(screen.getByTestId("usageChart")).toBeInTheDocument();
     });
 });
