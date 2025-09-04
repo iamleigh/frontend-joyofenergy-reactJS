@@ -93,19 +93,19 @@ html {
     color: rgb(109 109 109);
 }
 
-.greyBlue {
+.greyblue {
     color: rgb(130 116 182);
 }
 
-.menuWidth {
+.menuwidth {
     min-width: 12rem;
 }
 
-.chartHeight {
+.chartheight {
     height: 17rem;
 }
 
-.roundedMore {
+.roundedmore {
     border-radius: 0.5rem;
 }
 

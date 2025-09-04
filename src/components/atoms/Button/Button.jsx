@@ -12,7 +12,7 @@ const Button = ({ label }) => {
               pr2
               pt1
               pb1
-              roundedMore
+              roundedmore
               border-grey
               bg-blue
               white

@@ -18,7 +18,7 @@ const EnergyConsumption = ({ readings }) => {
             <section className="mb3">
                 <Button label="Last 30 days" />
             </section>
-            <section className="chartHeight mb3">
+            <section className="chartheight mb3">
                 <canvas id={containerId} />
             </section>
         </>
